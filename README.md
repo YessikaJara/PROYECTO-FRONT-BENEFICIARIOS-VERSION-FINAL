@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
@@ -34,3 +35,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+=======
+# PROYECTO-FRONT-BENEFICIARIOS
+Aplicación web desarrollada con Next.js, React y MySQL siguiendo el patrón de arquitectura MVC. Permite gestionar la información de la base de datos Beneficiarios mediante operaciones CRUD a través de una interfaz web y una API REST. La conexión a la base de datos se realiza de forma segura utilizando variables de entorno y el paquete mysql2.
+>>>>>>> 1c373378e6d7c44ff4241a188d48e649e3a75992
