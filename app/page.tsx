@@ -1,65 +1,129 @@
-import Image from "next/image";
+'use client';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
+  const router = useRouter();
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div style={{
+      minHeight: '100vh',
+      background: '#ffffff',
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      fontFamily: 'Arial, sans-serif',
+    }}>
+
+      {/* Banner azul oscuro */}
+      <div style={{
+        background: '#1F4E79',
+        width: '100%',
+        padding: '25px 20px',
+        textAlign: 'center',
+        boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
+      }}>
+        <h1 style={{ color: '#ffffff', fontSize: '2rem', margin: '0 0 6px 0' }}>
+          🎓 Sistema de Beneficiarios SENA
+        </h1>
+        <p style={{ color: '#BDD7EE', fontSize: '1rem', margin: 0 }}>
+          Bogotá D.C. — Base de datos normalizada 3FN — 49.095 registros
+        </p>
+      </div>
+
+      {/* Cards */}
+      <div style={{
+        display: 'flex',
+        gap: '24px',
+        flexWrap: 'wrap',
+        justifyContent: 'center',
+        maxWidth: '900px',
+        marginTop: '60px',
+        padding: '20px'
+      }}>
+
+        {/* Card Localidades */}
+        <div onClick={() => router.push('/localidades')} style={{
+          background: '#ffffff',
+          borderRadius: '12px',
+          padding: '30px',
+          width: '240px',
+          textAlign: 'center',
+          cursor: 'pointer',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+          borderTop: '5px solid #1F4E79',
+          border: '1px solid #e0e0e0',
+        }}>
+          <div style={{ fontSize: '3rem', marginBottom: '10px' }}>📍</div>
+          <h2 style={{ color: '#1F4E79', margin: '0 0 8px 0' }}>Localidades</h2>
+          <p style={{ color: '#444', fontSize: '0.9rem', margin: '0 0 15px 0' }}>
+            22 localidades de Bogotá
           </p>
+          <div style={{ display: 'flex', gap: '5px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <span style={{ background: '#E8F5E9', color: '#1B5E20', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Consulta</span>
+            <span style={{ background: '#E3F2FD', color: '#0D47A1', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Insert</span>
+            <span style={{ background: '#FFF8E1', color: '#E65100', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Update</span>
+            <span style={{ background: '#FFEBEE', color: '#B71C1C', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Delete</span>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Card Instituciones */}
+        <div onClick={() => router.push('/instituciones')} style={{
+          background: '#ffffff',
+          borderRadius: '12px',
+          padding: '30px',
+          width: '240px',
+          textAlign: 'center',
+          cursor: 'pointer',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+          borderTop: '5px solid #1F4E79',
+          border: '1px solid #e0e0e0',
+        }}>
+          <div style={{ fontSize: '3rem', marginBottom: '10px' }}>🏫</div>
+          <h2 style={{ color: '#1F4E79', margin: '0 0 8px 0' }}>Instituciones</h2>
+          <p style={{ color: '#444', fontSize: '0.9rem', margin: '0 0 15px 0' }}>
+            59 universidades IES
+          </p>
+          <div style={{ display: 'flex', gap: '5px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <span style={{ background: '#E8F5E9', color: '#1B5E20', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Consulta</span>
+            <span style={{ background: '#E3F2FD', color: '#0D47A1', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Insert</span>
+            <span style={{ background: '#FFF8E1', color: '#E65100', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Update</span>
+            <span style={{ background: '#FFEBEE', color: '#B71C1C', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Delete</span>
+          </div>
         </div>
-      </main>
+
+        {/* Card Beneficiarios */}
+        <div onClick={() => router.push('/beneficiarios')} style={{
+          background: '#ffffff',
+          borderRadius: '12px',
+          padding: '30px',
+          width: '240px',
+          textAlign: 'center',
+          cursor: 'pointer',
+          boxShadow: '0 4px 16px rgba(0,0,0,0.12)',
+          borderTop: '5px solid #1F4E79',
+          border: '1px solid #e0e0e0',
+        }}>
+          <div style={{ fontSize: '3rem', marginBottom: '10px' }}>👥</div>
+          <h2 style={{ color: '#1F4E79', margin: '0 0 8px 0' }}>Beneficiarios</h2>
+          <p style={{ color: '#444', fontSize: '0.9rem', margin: '0 0 15px 0' }}>
+            49.095 beneficiarios
+          </p>
+          <div style={{ display: 'flex', gap: '5px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <span style={{ background: '#E8F5E9', color: '#1B5E20', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Consulta</span>
+            <span style={{ background: '#FFF8E1', color: '#E65100', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Update</span>
+            <span style={{ background: '#FFEBEE', color: '#B71C1C', padding: '3px 8px', borderRadius: '12px', fontSize: '0.75rem', fontWeight: 'bold' }}>Delete</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Footer */}
+      <div style={{ marginTop: '40px', textAlign: 'center', padding: '20px' }}>
+        <p style={{ color: '#444', fontSize: '0.85rem' }}>
+          Proyecto SENA — Desarrollo Web Full Stack — Base de datos en Aiven Cloud ☁️
+        </p>
+      </div>
+
     </div>
   );
 }
