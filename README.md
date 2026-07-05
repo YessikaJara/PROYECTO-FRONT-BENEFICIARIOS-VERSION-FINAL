@@ -1,7 +1,7 @@
 📚 Sistema de Beneficiarios — Bogotá D.C.
 Aplicación web full stack desarrollada con Next.js 16 y MySQL, que permite gestionar información social y geográfica de beneficiarios a través de una interfaz organizada por operaciones CRUD.
 
-📄 Descripción
+📄 Descripción :
 Este sistema centraliza la administración de datos de beneficiarios del programa, incluyendo su localidad, institución de educación superior (IES) vinculada, sexo, rango de edad, condición de víctima del conflicto y condición de discapacidad. Está diseñado para consulta, actualización y eliminación de información desde una interfaz web sencilla y navegable, conectada a una base de datos normalizada en 3FN con 49.095 registros alojada en Aiven Cloud.
 
 📁 Estructura del Proyecto
@@ -115,11 +115,11 @@ El sistema está organizado en tres tipos de operaciones:
 
 Localidades — Listado de las 22 localidades de Bogotá Beneficiarios — Listado de los primeros 100 de 49.095 beneficiarios registrados, con su localidad e institución asociadas Instituciones — Listado de las 59 instituciones de educación superior (IES) vinculadas al sistema
 
-🟠 Actualización (PUT)
+🟠 Actualización (Update)
 
 Beneficiarios — Modificación de sexo, edad, víctima de conflicto y discapacidad Localidades — Actualización del nombre de una localidad Instituciones — Actualización del nombre de una institución IES
 
-🟢 Inserción (POST)
+🟢 Inserción (Create)
 
 Localidades — Registro de nuevas localidades Instituciones — Registro de nuevas instituciones IES
 
@@ -181,7 +181,5 @@ Abrir http://localhost:3000 y navegar entre los módulos de Localidades, Institu
 <img width="1353" height="683" alt="image" src="https://github.com/user-attachments/assets/e3d470b3-28cb-40c8-aad8-28fd95a8df58" />
 
 
-👩‍💻 Créditos
-Proyecto desarrollado por Yessika Jara como proyecto productivo/etapa productiva del programa Análisis y Desarrollo de Software (ADSO) – SENA.
 
 
