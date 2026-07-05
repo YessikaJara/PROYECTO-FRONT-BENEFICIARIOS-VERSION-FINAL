@@ -4,7 +4,7 @@ import BeneficiarioModel from '../../../../models/beneficiarioModel';
 
 export async function PUT(request, { params }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { sexo, edad, victima_conflicto, discapacidad } = await request.json();
     await BeneficiarioModel.update(id, sexo, edad, victima_conflicto, discapacidad);
     return NextResponse.json({ message: 'Beneficiario actualizado con éxito' });

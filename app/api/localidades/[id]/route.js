@@ -4,7 +4,7 @@ import LocalidadModel from '../../../../models/localidadModel';
 
 export async function PUT(request, { params }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const { nombre_localidad } = await request.json();
     await LocalidadModel.update(id, nombre_localidad);
     return NextResponse.json({ message: 'Localidad actualizada con éxito' });

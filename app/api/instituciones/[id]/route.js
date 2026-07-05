@@ -4,7 +4,7 @@ import InstitucionModel from '../../../../models/institucionModel';
 
 export async function PUT(request, { params }) {
   try {
-    const { id } = params;
+    const { id } = await params; 
     const { nombre_ies } = await request.json();
     await InstitucionModel.update(id, nombre_ies);
     return NextResponse.json({ message: 'Institución actualizada con éxito' });
