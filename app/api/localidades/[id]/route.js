@@ -15,7 +15,7 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const { id } = params;
+   const { id } = await params;
     await LocalidadModel.delete(id);
     return NextResponse.json({ message: 'Localidad eliminada con éxito' });
   } catch (error) {

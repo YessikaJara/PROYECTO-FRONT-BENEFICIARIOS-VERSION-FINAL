@@ -15,7 +15,7 @@ export async function PUT(request, { params }) {
 
 export async function DELETE(request, { params }) {
   try {
-    const { id } = params;
+    const { id } = await params;
     await BeneficiarioModel.delete(id);
     return NextResponse.json({ message: 'Beneficiario eliminado con éxito' });
   } catch (error) {
